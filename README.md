@@ -26,4 +26,3 @@ Get subtotal and grand total price of cart
 
 $subTotal = Mage::getModel('checkout/cart')->getQuote()->getSubtotal();
 $grandTotal = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
-- See more at: http://blog.chapagain.com.np/magento-get-all-shopping-cart-items-and-totals/#sthash.IpF6DE1V.dpuf
