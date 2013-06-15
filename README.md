@@ -1,7 +1,7 @@
 MagentoDocument
 ===============
 
-Magento Document
+<b>Magento Document</b>
 
 Cart Information:
 
@@ -28,11 +28,10 @@ $subTotal = Mage::getModel('checkout/cart')->getQuote()->getSubtotal();
 $grandTotal = Mage::getModel('checkout/cart')->getQuote()->getGrandTotal();
 
 -------------------------------------------------------------------------------------------------------------------
-Filter products by Price programmatically.
+<b>Filter products by Price programmatically.</b>
 
 $html='<div>';
-$html .= '
-<h4>Price</h4>
+$html .= 'price
 <ul class="price_grid">';
 $html .= $this->priceHtmlnav($maincategoryId);
 $html .='</ul>';
@@ -42,12 +41,17 @@ echo $html;
 
 /*price block html
 it took price filter and display in menu*/
+
 public function priceHtmlnav($maincategoryId) {
 
 $html='';
+
 $layer = Mage::getModel('catalog/layer');
+
 $category = Mage::getModel('catalog/category')->load($maincategoryId);
+
 if ($category->getId()) {
+
 $origCategory = $layer->getCurrentCategory();
 $layer->setCurrentCategory($category);
 }
